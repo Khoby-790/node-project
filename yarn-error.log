@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add mongoose express uuid bcryptjs passport passport-local nodemon body-parser ejs express-ejs-extend @babe/core
+
+PATH: 
+  C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_211\bin;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\ProgramData\chocolatey\lib\Elixir/bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\4.2\bin;C:\MinGW\bin;;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\Bhra Khoby\AppData\Local\Microsoft\WindowsApps;C:\Users\Bhra Khoby\AppData\Roaming\Composer\vendor\bin;C:\Users\Bhra Khoby\AppData\Local\Android\Sdk\platform-tools;C:\Users\Bhra Khoby\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Bhra Khoby\AppData\Local\Yarn\bin;C:\Users\Bhra Khoby\AppData\Roaming\npm;C:\Program Files\MongoDB\Server\4.2\bin;C:\MinGW\bin;
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@babe%2fcore: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65939:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140464:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141436:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141358:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1145:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "express-route-assignment",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
