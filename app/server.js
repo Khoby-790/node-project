@@ -9,7 +9,7 @@ import ErrorHandlers from './Config/ErrorHandlers';
 
 require('dotenv').config();
 const dbUrl = process.env.DATABASE_URL;
-require('../app/config/db')(dbUrl);
+require('./Config/db')(dbUrl);
 
 
 const app = express();

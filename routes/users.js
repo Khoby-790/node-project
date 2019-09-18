@@ -12,6 +12,6 @@ Route.route('/login')
 
 Route.route('/register')
     .get(HomeController.register)
-    .post(AuthController.register);
+    .post(AuthController.register)
 
 module.exports = Route
