@@ -1,13 +1,15 @@
 import express from 'express';
 import path from 'path';
+import bodyParser from 'body-parser';
 import flash from 'connect-flash';
 import session from 'express-session';
-import ErrorHandlers from './config/ErrorHandlers';
+import validator from 'express-validator';
+import ErrorHandlers from './Config/ErrorHandlers';
 
 
 require('dotenv').config();
 const dbUrl = process.env.DATABASE_URL;
-require('../app/config/db')(dbUrl);
+require('./Config/db')(dbUrl);
 
 
 const app = express();
@@ -16,17 +18,18 @@ const app = express();
 app.engine('ejs', require('express-ejs-extend'));
 app.set('view engine', 'ejs');
 
+
 // //where to locate views
 // console.log(__dirname)
 app.set('views', path.join(__dirname + '/../views'));
 
-// //where to locate static files
-app.use(express.static(path.join(__dirname, 'public')));
+// //where to locate static files;
+app.use(express.static('public'));
 
-// //middleware parser
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(validator());
 
 // //Express session
 app.use(
@@ -50,6 +53,7 @@ app.use(function(req, res, next) {
 
 //routes
 app.use('/', require('../routes/index'));
+app.use('/users', require('../routes/users'));
 
 
 

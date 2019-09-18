@@ -8,4 +8,5 @@ const Route = Router();
 Route.route('/')
     .get(HomeController.index);
 
+
 module.exports = Route

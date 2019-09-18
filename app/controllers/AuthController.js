@@ -15,7 +15,7 @@ class AuthController {
     static async register(req, res, next){
         const { email, password, password2, gender, name } = req.body;
 
-        const user = await User.findOne({ email });
+        let user = await User.findOne({ email });
 
         if(user){
             req.flash('error_msg','email already exists');
@@ -23,14 +23,14 @@ class AuthController {
         }
         req.checkBody('email','provide a valid email address').notEmpty().isEmail();
         req.checkBody('name','We could use a name you know?').notEmpty();
-        req.checkBody('password','Please provide a means of locking your account (Password)').notEmpty().length({min: 6, max: 12});
+        req.checkBody('password','Please provide a means of locking your account (Password)').notEmpty().isLength({min: 6, max: 12});
         req.checkBody('password2', 'Please provide a confirmation password').notEmpty().equals(password);
         const errors = req.validationErrors();
         if(errors){
             req.flash('errors',errors);
             res.redirect('back');
         }
-        const user = new User({
+        user = new User({
             email,
             name,
             password,
@@ -48,4 +48,4 @@ class AuthController {
 
 }
 
-
+export default AuthController
