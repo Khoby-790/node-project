@@ -1,28 +1,30 @@
 {
-  "name": "express-route-assignment",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "nodemon index"
-  },
-  "dependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "@babel/register": "^7.6.0",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "connect-flash": "^0.1.1",
-    "ejs": "^2.7.1",
-    "express": "^4.17.1",
-    "express-ejs-extend": "^0.0.1",
-    "mongoose": "^5.7.1",
-    "nodemon": "^1.19.2",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "uuid": "^3.3.3"
-  },
-  "devDependencies": {
-    "esm": "^3.2.25"
-  }
+    "name": "express-route-assignment",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "nodemon index"
+    },
+    "dependencies": {
+        "@babel/core": "^7.6.0",
+        "@babel/preset-env": "^7.6.0",
+        "@babel/register": "^7.6.0",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "connect-flash": "^0.1.1",
+        "dotenv": "^8.1.0",
+        "ejs": "^2.7.1",
+        "express": "^4.17.1",
+        "express-ejs-extend": "^0.0.1",
+        "express-session": "^1.16.2",
+        "mongoose": "^5.7.1",
+        "nodemon": "^1.19.2",
+        "passport": "^0.4.0",
+        "passport-local": "^1.0.0",
+        "uuid": "^3.3.3"
+    },
+    "devDependencies": {
+        "esm": "^3.2.25"
+    }
 }

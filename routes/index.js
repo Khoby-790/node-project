@@ -1,19 +1,11 @@
-
 import { Router } from 'express';
-
+import HomeController from '../app/controllers/HomeController';
 const Route = Router();
 
 
 
-//controller
-//controller goes here
-
-//middleware
-//middleware goes here (if any)
-
-//routes
-//routes here\
-
-Route.get('/',(req, res)=>res.json({name: "Emmanuel Baidoo"}));
+// Route.get('/',(req, res)=>res.json({name: "Emmanuel Baidoo"}));
+Route.route('/')
+    .get(HomeController.index);
 
 module.exports = Route
