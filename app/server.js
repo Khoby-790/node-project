@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import flash from 'connect-flash';
 import session from 'express-session';
-import ErrorHandlers from './Config/ErrorHandlers';
+import ErrorHandlers from './config/ErrorHandlers';
 
 
 require('dotenv').config();
