@@ -42,5 +42,5 @@ schema.virtual('user',{
 
 
 
-module.exports = model('User',schema);
+export default model('Blog',schema);
 

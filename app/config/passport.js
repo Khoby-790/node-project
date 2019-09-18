@@ -2,7 +2,7 @@ import {Strategy as LocalStrategy} from 'passport-local';
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
-const User = mongoose.model('User');
+import User from '../models/user.model';
 
 
 

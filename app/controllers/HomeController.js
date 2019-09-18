@@ -16,6 +16,7 @@ class HomeController {
             title: 'Register'
         });
     };
+
 }
 
 export default HomeController;

@@ -5,11 +5,13 @@ import flash from 'connect-flash';
 import session from 'express-session';
 import validator from 'express-validator';
 import ErrorHandlers from './Config/ErrorHandlers';
+import passport from 'passport';
 
 
 require('dotenv').config();
 const dbUrl = process.env.DATABASE_URL;
 require('./Config/db')(dbUrl);
+require('./Config/passport')(passport);
 
 
 const app = express();
@@ -39,6 +41,9 @@ app.use(
         saveUninitialized: true
     })
 );
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(flash());
 

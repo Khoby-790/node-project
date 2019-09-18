@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 
 const options = {
     useUnifiedTopology: true,
-    useNewUrlParser: true 
+    useNewUrlParser: true,
+    useCreateIndex: true 
 }
 
 module.exports = (dbUrl) =>{
