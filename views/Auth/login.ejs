@@ -19,26 +19,27 @@
                     Login
                 </div>
                 <div class="card-body">
-                    <form action="" method="POST">
-                        <div class="form-group">
-                            <label for="Email">Email</label>
-                            <input type="text" class="form-control" placeholder="eg. johndoe@gmail.com" name="email" required autofocus>
-                        </div>
-                        <div class="form-group">
-                            <label for="Password">Password</label>
-                            <input type="password" class="form-control" placeholder="Password" name="password" required>
-                        </div>
-                        <div class="d-flex justify-content-space-between align-items-center">
-                            <div>
-                                <a href="#" class="text">Forgotten password?</a>
+                    <%- include('../partials/messages.ejs')%>
+                        <form action="" method="POST">
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input type="text" class="form-control" placeholder="eg. johndoe@gmail.com" name="email" required autofocus>
                             </div>
-                            <div>
-                                <button type="submit" class="btn btn-success text-light mr-1">Sign In</button>
-                                <button type="reset" class="btn btn-info text-light">Reset</button>
+                            <div class="form-group">
+                                <label for="Password">Password</label>
+                                <input type="password" class="form-control" placeholder="Password" name="password" required>
                             </div>
+                            <div class="d-flex justify-content-space-between align-items-center">
+                                <div>
+                                    <a href="#" class="text">Forgotten password?</a>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-success text-light mr-1">Sign In</button>
+                                    <button type="reset" class="btn btn-info text-light">Reset</button>
+                                </div>
 
-                        </div>
-                    </form>
+                            </div>
+                        </form>
                 </div>
             </div>
         </div>
