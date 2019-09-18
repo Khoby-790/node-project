@@ -10,7 +10,7 @@ const schema = new Schema({
     },
     password: {
         type: String,
-        required: true
+        required: false
     },
     name: {
         type: String,
@@ -18,7 +18,6 @@ const schema = new Schema({
     },
     gender: {
         type: String,
-        enum: ['Male', 'female','not specified'],
         required: false,
         default: 'not specified'
     },

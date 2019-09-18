@@ -37,12 +37,17 @@ class AuthController {
             gender,
         });
 
-        user.password = await Utils.generateHash(password);
+        try{
+            user.password = Utils.generateHash(password);
+        }catch(err){
+            throw new TypeError(err);
+        }
 
         user.save();
 
-        res.flash('success_msg','Account created you can now login to your account');
-        res.redirect('/login');
+        req.flash('success_msg','Account created you can now login to your account');
+        res.redirect('/users/login');
+
 
     }
 
