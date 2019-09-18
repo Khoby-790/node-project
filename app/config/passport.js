@@ -2,8 +2,9 @@ import {Strategy as LocalStrategy} from 'passport-local';
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
-// user Object
-let model = {};
+const User = mongoose.model('User');
+
+
 
 
 
@@ -23,8 +24,7 @@ module.exports = function(passport) {
         bcrypt.compare(password, user.password, (err, isMatch) => {
           if (err) throw err;
           if (isMatch) {
-            model = user;
-            return done(null, model);
+            return done(null, user);
           } else {
             return done(null, false, { message: 'Password incorrect' });
           }
